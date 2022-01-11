@@ -2,6 +2,6 @@
 
 class_Spi Spi;
 
-void class_Spi::InitFunction(void){
+FUNC(void, SPI_CODE) class_Spi::InitFunction(void){
 }
 

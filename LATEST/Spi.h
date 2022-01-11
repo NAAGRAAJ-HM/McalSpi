@@ -4,7 +4,7 @@
 
 class class_Spi{
    public:
-      void InitFunction(void);
+      FUNC(void, SPI_CODE) InitFunction(void);
 };
 
 extern class_Spi Spi;
