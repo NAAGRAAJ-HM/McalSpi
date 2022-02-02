@@ -26,8 +26,6 @@ class class_Spi{
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-      FUNC(void, SPI_CODE) InitFunction      (void);
-      FUNC(void, SPI_CODE) DeInitFunction    (void);
       FUNC(void, SPI_CODE) WriteIB           (void);
       FUNC(void, SPI_CODE) AsyncTransmit     (void);
       FUNC(void, SPI_CODE) ReadIB            (void);
