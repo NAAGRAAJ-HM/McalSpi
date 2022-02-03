@@ -42,7 +42,7 @@ class class_Spi_EcuM : public class_EcuM_Client{
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern class_Spi_EcuM *Spi_EcuM_ptr;
+extern class_EcuM_Client *EcuM_Client_ptr_Spi;
 
 /*****************************************************/
 /* EOF                                               */

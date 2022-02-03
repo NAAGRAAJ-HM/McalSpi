@@ -33,9 +33,9 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-class_Spi Spi;
 class_Spi_EcuM Spi_EcuM;
-class_Spi_EcuM *Spi_EcuM_ptr = &Spi_EcuM;
+class_EcuM_Client *EcuM_Client_ptr_Spi = &Spi_EcuM;
+class_Spi Spi;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
