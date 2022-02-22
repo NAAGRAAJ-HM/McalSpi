@@ -1,6 +1,6 @@
 #pragma once
 /*****************************************************/
-/* File   : Spi.h                                    */
+/* File   : Spi_Unused.h                             */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
@@ -21,7 +21,7 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class class_Spi{
+class class_Spi_Unused{
    public:
 /*****************************************************/
 /* FUNCTIONS                                         */
@@ -38,7 +38,6 @@ class class_Spi{
       FUNC(void, SPI_CODE) GetHWUnitStatus   (void);
       FUNC(void, SPI_CODE) Cancel            (void);
       FUNC(void, SPI_CODE) SetAsyncMode      (void);
-      FUNC(void, SPI_CODE) MainFunction      (void);
 };
 
 /*****************************************************/
@@ -52,7 +51,7 @@ class class_Spi{
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern class_Spi Spi;
+//extern class_Spi Spi;
 
 /*****************************************************/
 /* EOF                                               */

@@ -1,6 +1,6 @@
 #pragma once
 /*****************************************************/
-/* File   : Spi_EcuM.h                               */
+/* File   : Spi_SchM.h                               */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
@@ -9,7 +9,7 @@
 /*****************************************************/
 #include "Compiler_Cfg_Spi.h"
 
-#include "EcuM_Client.h"
+#include "SchM_Client.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
@@ -22,13 +22,12 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class interface_Spi_EcuM : public interface_EcuM_Client{
+class interface_Spi_SchM : public interface_SchM_Client{
    public:
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-      FUNC(void, SPI_CODE) InitFunction   (void);
-      FUNC(void, SPI_CODE) DeInitFunction (void);
+      FUNC(void, SPI_CODE) MainFunction(void);
 };
 
 /*****************************************************/
@@ -42,7 +41,7 @@ class interface_Spi_EcuM : public interface_EcuM_Client{
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern interface_Spi_EcuM *EcuM_Client_ptr_Spi;
+extern interface_Spi_SchM *SchM_Client_ptr_Spi;
 
 /*****************************************************/
 /* EOF                                               */

@@ -6,9 +6,10 @@
 /*****************************************************/
 /* #INCLUDES                                         */
 /*****************************************************/
-#include "Spi.h"
-
+#include "module.h"
 #include "Spi_EcuM.h"
+#include "Spi_SchM.h"
+#include "Spi_Unused.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
@@ -21,6 +22,16 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
+class module_Spi:
+      public abstract_module
+   ,  public interface_Spi_EcuM
+   ,  public interface_Spi_SchM
+{
+   public:
+      FUNC(void, SPI_CODE) InitFunction   (void);
+      FUNC(void, SPI_CODE) DeInitFunction (void);
+      FUNC(void, SPI_CODE) MainFunction   (void);
+};
 
 /*****************************************************/
 /* CONSTS                                            */
@@ -33,56 +44,57 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-class_Spi_EcuM Spi_EcuM;
-class_EcuM_Client *EcuM_Client_ptr_Spi = &Spi_EcuM;
-class_Spi Spi;
+module_Spi Spi;
+
+interface_Spi_EcuM *EcuM_Client_ptr_Spi = &Spi;
+interface_Spi_SchM *SchM_Client_ptr_Spi = &Spi;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, SPI_CODE) class_Spi_EcuM::InitFunction(void){
+FUNC(void, SPI_CODE) module_Spi::InitFunction(void){
 }
 
-FUNC(void, SPI_CODE) class_Spi_EcuM::DeInitFunction(void){
+FUNC(void, SPI_CODE) module_Spi::DeInitFunction(void){
 }
 
-FUNC(void, SPI_CODE) class_Spi::WriteIB(void){
+FUNC(void, SPI_CODE) module_Spi::MainFunction(void){
 }
 
-FUNC(void, SPI_CODE) class_Spi::AsyncTransmit(void){
+FUNC(void, SPI_CODE) class_Spi_Unused::WriteIB(void){
 }
 
-FUNC(void, SPI_CODE) class_Spi::ReadIB(void){
+FUNC(void, SPI_CODE) class_Spi_Unused::AsyncTransmit(void){
 }
 
-FUNC(void, SPI_CODE) class_Spi::SetupEB(void){
+FUNC(void, SPI_CODE) class_Spi_Unused::ReadIB(void){
 }
 
-FUNC(void, SPI_CODE) class_Spi::GetStatus(void){
+FUNC(void, SPI_CODE) class_Spi_Unused::SetupEB(void){
 }
 
-FUNC(void, SPI_CODE) class_Spi::GetJobResult(void){
+FUNC(void, SPI_CODE) class_Spi_Unused::GetStatus(void){
 }
 
-FUNC(void, SPI_CODE) class_Spi::GetSequenceResult(void){
+FUNC(void, SPI_CODE) class_Spi_Unused::GetJobResult(void){
 }
 
-FUNC(void, SPI_CODE) class_Spi::GetVersionInfo(void){
+FUNC(void, SPI_CODE) class_Spi_Unused::GetSequenceResult(void){
 }
 
-FUNC(void, SPI_CODE) class_Spi::SyncTransmit(void){
+FUNC(void, SPI_CODE) class_Spi_Unused::GetVersionInfo(void){
 }
 
-FUNC(void, SPI_CODE) class_Spi::GetHWUnitStatus(void){
+FUNC(void, SPI_CODE) class_Spi_Unused::SyncTransmit(void){
 }
 
-FUNC(void, SPI_CODE) class_Spi::Cancel(void){
+FUNC(void, SPI_CODE) class_Spi_Unused::GetHWUnitStatus(void){
 }
 
-FUNC(void, SPI_CODE) class_Spi::SetAsyncMode(void){
+FUNC(void, SPI_CODE) class_Spi_Unused::Cancel(void){
 }
 
-FUNC(void, SPI_CODE) class_Spi::MainFunction(void){
+FUNC(void, SPI_CODE) class_Spi_Unused::SetAsyncMode(void){
 }
 
 /*****************************************************/
