@@ -27,8 +27,8 @@ class interface_Spi_EcuM : public interface_EcuM_Client{
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-      FUNC(void, SPI_CODE) InitFunction   (void);
-      FUNC(void, SPI_CODE) DeInitFunction (void);
+      virtual FUNC(void, SPI_CODE) InitFunction   (void) = 0;
+      virtual FUNC(void, SPI_CODE) DeInitFunction (void) = 0;
 };
 
 /*****************************************************/
