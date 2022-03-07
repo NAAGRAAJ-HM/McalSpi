@@ -24,8 +24,6 @@
 /*****************************************************/
 class module_Spi:
       public abstract_module
-   ,  public interface_Spi_EcuM
-   ,  public interface_Spi_SchM
 {
    public:
       FUNC(void, SPI_CODE) InitFunction   (void);
@@ -44,10 +42,9 @@ class module_Spi:
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-module_Spi Spi;
-
-interface_Spi_EcuM *EcuM_Client_ptr_Spi = &Spi;
-interface_Spi_SchM *SchM_Client_ptr_Spi = &Spi;
+module_Spi     Spi;
+infEcuMClient* gptrinfEcuMClient_Spi = &Spi;
+infSchMClient* gptrinfSchMClient_Spi = &Spi;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
