@@ -7,8 +7,8 @@
 /* #INCLUDES                                         */
 /*****************************************************/
 #include "module.h"
-#include "Spi_EcuM.h"
-#include "Spi_SchM.h"
+#include "infSpi_EcuM.h"
+#include "infSpi_SchM.h"
 #include "Spi_Unused.h"
 
 /*****************************************************/
@@ -28,6 +28,7 @@ class module_Spi:
    public:
       FUNC(void, SPI_CODE) InitFunction   (void);
       FUNC(void, SPI_CODE) DeInitFunction (void);
+      FUNC(void, SPI_CODE) GetVersionInfo (void);
       FUNC(void, SPI_CODE) MainFunction   (void);
 };
 
@@ -44,6 +45,7 @@ class module_Spi:
 /*****************************************************/
 module_Spi     Spi;
 infEcuMClient* gptrinfEcuMClient_Spi = &Spi;
+infDcmClient*  gptrinfDcmClient_Spi  = &Spi;
 infSchMClient* gptrinfSchMClient_Spi = &Spi;
 
 /*****************************************************/
@@ -53,6 +55,9 @@ FUNC(void, SPI_CODE) module_Spi::InitFunction(void){
 }
 
 FUNC(void, SPI_CODE) module_Spi::DeInitFunction(void){
+}
+
+FUNC(void, SPI_CODE) module_Spi::GetVersionInfo(void){
 }
 
 FUNC(void, SPI_CODE) module_Spi::MainFunction(void){
