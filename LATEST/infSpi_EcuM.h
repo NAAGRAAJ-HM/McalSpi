@@ -1,6 +1,6 @@
 #pragma once
 /*****************************************************/
-/* File   : Spi_SchM.h                               */
+/* File   : infSpi_EcuM.h                            */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
@@ -32,7 +32,7 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern infSchMClient* gptrinfSchMClient_Spi;
+extern infEcuMClient* gptrinfEcuMClient_Spi;
 
 /*****************************************************/
 /* FUNCTIONS                                         */

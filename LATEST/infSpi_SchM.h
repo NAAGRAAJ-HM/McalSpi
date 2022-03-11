@@ -1,15 +1,13 @@
+#pragma once
 /*****************************************************/
-/* File   : Spi.cpp                                  */
+/* File   : infSpi_SchM.h                            */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
 /*****************************************************/
 /* #INCLUDES                                         */
 /*****************************************************/
-#include "module.h"
-#include "infSpi_EcuM.h"
-#include "infSpi_Dcm.h"
-#include "infSpi_SchM.h"
+#include "Compiler_Cfg_Spi.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
@@ -22,15 +20,6 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class module_Spi:
-      public abstract_module
-{
-   public:
-      FUNC(void, SPI_CODE) InitFunction   (void);
-      FUNC(void, SPI_CODE) DeInitFunction (void);
-      FUNC(void, SPI_CODE) GetVersionInfo (void);
-      FUNC(void, SPI_CODE) MainFunction   (void);
-};
 
 /*****************************************************/
 /* CONSTS                                            */
@@ -43,60 +32,11 @@ class module_Spi:
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-module_Spi     Spi;
-infEcuMClient* gptrinfEcuMClient_Spi = &Spi;
-infDcmClient*  gptrinfDcmClient_Spi  = &Spi;
-infSchMClient* gptrinfSchMClient_Spi = &Spi;
+extern infSchMClient* gptrinfSchMClient_Spi;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, SPI_CODE) module_Spi::InitFunction(void){
-}
-
-FUNC(void, SPI_CODE) module_Spi::DeInitFunction(void){
-}
-
-FUNC(void, SPI_CODE) module_Spi::GetVersionInfo(void){
-}
-
-FUNC(void, SPI_CODE) module_Spi::MainFunction(void){
-}
-
-#include "Spi_Unused.h"
-
-FUNC(void, SPI_CODE) class_Spi_Unused::WriteIB(void){
-}
-
-FUNC(void, SPI_CODE) class_Spi_Unused::AsyncTransmit(void){
-}
-
-FUNC(void, SPI_CODE) class_Spi_Unused::ReadIB(void){
-}
-
-FUNC(void, SPI_CODE) class_Spi_Unused::SetupEB(void){
-}
-
-FUNC(void, SPI_CODE) class_Spi_Unused::GetStatus(void){
-}
-
-FUNC(void, SPI_CODE) class_Spi_Unused::GetJobResult(void){
-}
-
-FUNC(void, SPI_CODE) class_Spi_Unused::GetSequenceResult(void){
-}
-
-FUNC(void, SPI_CODE) class_Spi_Unused::SyncTransmit(void){
-}
-
-FUNC(void, SPI_CODE) class_Spi_Unused::GetHWUnitStatus(void){
-}
-
-FUNC(void, SPI_CODE) class_Spi_Unused::Cancel(void){
-}
-
-FUNC(void, SPI_CODE) class_Spi_Unused::SetAsyncMode(void){
-}
 
 /*****************************************************/
 /* EOF                                               */
