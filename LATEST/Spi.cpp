@@ -7,7 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.h"
-#include "infSpi_Version.h"
+#include "Spi_Cfg.h"
 #include "infSpi_EcuM.h"
 #include "infSpi_Dcm.h"
 #include "infSpi_SchM.h"
@@ -15,10 +15,19 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
+#define SPI_AR_RELEASE_MAJOR_VERSION                                           4
+#define SPI_AR_RELEASE_MINOR_VERSION                                           3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
+#if(SPI_AR_RELEASE_MAJOR_VERSION != STD_AR_RELEASE_MAJOR_VERSION)
+   #error "Incompatible SPI_AR_RELEASE_MAJOR_VERSION!"
+#endif
+
+#if(SPI_AR_RELEASE_MINOR_VERSION != STD_AR_RELEASE_MINOR_VERSION)
+   #error "Incompatible SPI_AR_RELEASE_MINOR_VERSION!"
+#endif
 
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
@@ -61,6 +70,11 @@ FUNC(void, SPI_CODE) module_Spi::DeInitFunction(void){
 }
 
 FUNC(void, SPI_CODE) module_Spi::GetVersionInfo(void){
+#if(STD_ON == Spi_DevErrorDetect)
+//TBD: API parameter check
+   Det_ReportError(
+   );
+#endif
 }
 
 FUNC(void, SPI_CODE) module_Spi::MainFunction(void){
