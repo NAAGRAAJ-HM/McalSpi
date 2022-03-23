@@ -40,6 +40,16 @@ class module_Spi:
       FUNC(void, SPI_CODE) DeInitFunction (void);
       FUNC(void, SPI_CODE) GetVersionInfo (void);
       FUNC(void, SPI_CODE) MainFunction   (void);
+
+   private:
+      CONST(Std_TypeVersionInfo, SPI_CONST) VersionInfo = {
+            0x0000
+         ,  0xFFFF
+         ,  0x01
+         ,  '0'
+         ,  '1'
+         ,  '0'
+      };
 };
 
 /******************************************************************************/
