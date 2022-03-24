@@ -7,7 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.h"
-#include "Spi_Cfg.h"
+#include "CfgSpi.h"
 #include "infSpi_EcuM.h"
 #include "infSpi_Dcm.h"
 #include "infSpi_SchM.h"
