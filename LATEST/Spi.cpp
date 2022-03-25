@@ -6,11 +6,11 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "module.h"
-#include "CfgSpi.h"
-#include "infSpi_EcuM.h"
-#include "infSpi_Dcm.h"
-#include "infSpi_SchM.h"
+#include "module.hpp"
+#include "CfgSpi.hpp"
+#include "infSpi_EcuM.hpp"
+#include "infSpi_Dcm.hpp"
+#include "infSpi_SchM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -90,7 +90,7 @@ FUNC(void, SPI_CODE) module_Spi::GetVersionInfo(void){
 FUNC(void, SPI_CODE) module_Spi::MainFunction(void){
 }
 
-#include "Spi_Unused.h"
+#include "Spi_Unused.hpp"
 
 FUNC(void, SPI_CODE) class_Spi_Unused::WriteIB(void){
 }
