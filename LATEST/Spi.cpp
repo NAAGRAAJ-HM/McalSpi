@@ -90,7 +90,20 @@ FUNC(void, SPI_CODE) module_Spi::GetVersionInfo(void){
 FUNC(void, SPI_CODE) module_Spi::MainFunction(void){
 }
 
-#include "Spi_Unused.hpp"
+class class_Spi_Unused{
+   public:
+      FUNC(void, SPI_CODE) WriteIB           (void);
+      FUNC(void, SPI_CODE) AsyncTransmit     (void);
+      FUNC(void, SPI_CODE) ReadIB            (void);
+      FUNC(void, SPI_CODE) SetupEB           (void);
+      FUNC(void, SPI_CODE) GetStatus         (void);
+      FUNC(void, SPI_CODE) GetJobResult      (void);
+      FUNC(void, SPI_CODE) GetSequenceResult (void);
+      FUNC(void, SPI_CODE) SyncTransmit      (void);
+      FUNC(void, SPI_CODE) GetHWUnitStatus   (void);
+      FUNC(void, SPI_CODE) Cancel            (void);
+      FUNC(void, SPI_CODE) SetAsyncMode      (void);
+};
 
 FUNC(void, SPI_CODE) class_Spi_Unused::WriteIB(void){
 }
