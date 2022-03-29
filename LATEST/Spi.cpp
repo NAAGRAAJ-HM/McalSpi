@@ -7,7 +7,6 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.hpp"
-#include "CfgSpi.hpp"
 #include "infSpi_EcuM.hpp"
 #include "infSpi_Dcm.hpp"
 #include "infSpi_SchM.hpp"
@@ -36,37 +35,40 @@ class module_Spi:
       public abstract_module
 {
    public:
+      module_Spi(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
+      }
       FUNC(void, SPI_CODE) InitFunction   (void);
       FUNC(void, SPI_CODE) DeInitFunction (void);
-      FUNC(void, SPI_CODE) GetVersionInfo (void);
       FUNC(void, SPI_CODE) MainFunction   (void);
-
-   private:
-      CONST(Std_TypeVersionInfo, SPI_CONST) VersionInfo = {
-            0x0000
-         ,  0xFFFF
-         ,  0x01
-         ,  '0'
-         ,  '1'
-         ,  '0'
-      };
 };
+
+extern VAR(module_Spi, SPI_VAR) Spi;
 
 /******************************************************************************/
 /* CONSTS                                                                     */
 /******************************************************************************/
+CONSTP2VAR(infEcuMClient, SPI_VAR, SPI_CONST) gptrinfEcuMClient_Spi = &Spi;
+CONSTP2VAR(infDcmClient,  SPI_VAR, SPI_CONST) gptrinfDcmClient_Spi  = &Spi;
+CONSTP2VAR(infSchMClient, SPI_VAR, SPI_CONST) gptrinfSchMClient_Spi = &Spi;
 
 /******************************************************************************/
 /* PARAMS                                                                     */
 /******************************************************************************/
+#include "CfgSpi.hpp"
 
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_Spi, SPI_VAR) Spi;
-CONSTP2VAR(infEcuMClient, SPI_VAR, SPI_CONST) gptrinfEcuMClient_Spi = &Spi;
-CONSTP2VAR(infDcmClient,  SPI_VAR, SPI_CONST) gptrinfDcmClient_Spi  = &Spi;
-CONSTP2VAR(infSchMClient, SPI_VAR, SPI_CONST) gptrinfSchMClient_Spi = &Spi;
+VAR(module_Spi, SPI_VAR) Spi(
+   {
+         0x0000
+      ,  0xFFFF
+      ,  0x01
+      ,  '0'
+      ,  '1'
+      ,  '0'
+   }
+);
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
@@ -77,14 +79,6 @@ FUNC(void, SPI_CODE) module_Spi::InitFunction(void){
 
 FUNC(void, SPI_CODE) module_Spi::DeInitFunction(void){
    Spi.IsInitDone = E_NOT_OK;
-}
-
-FUNC(void, SPI_CODE) module_Spi::GetVersionInfo(void){
-#if(STD_ON == Spi_DevErrorDetect)
-//TBD: API parameter check
-   Det_ReportError(
-   );
-#endif
 }
 
 FUNC(void, SPI_CODE) module_Spi::MainFunction(void){
