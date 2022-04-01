@@ -78,6 +78,7 @@ VAR(module_Spi, SPI_VAR) Spi(
 FUNC(void, SPI_CODE) module_Spi::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, SPI_CONFIG_DATA, SPI_APPL_CONST) lptrCfgModule
 ){
+#if(STD_ON == Spi_InitCheck)
    if(E_OK == IsInitDone){
 #if(STD_ON == Spi_DevErrorDetect)
       Det_ReportError(
@@ -85,6 +86,7 @@ FUNC(void, SPI_CODE) module_Spi::InitFunction(
 #endif
    }
    else{
+#endif
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == Spi_DevErrorDetect)
          Det_ReportError(
@@ -96,10 +98,13 @@ FUNC(void, SPI_CODE) module_Spi::InitFunction(
 // use PBcfg_Spi as back-up configuration
       }
       IsInitDone = E_OK;
+#if(STD_ON == Spi_InitCheck)
    }
+#endif
 }
 
 FUNC(void, SPI_CODE) module_Spi::DeInitFunction(void){
+#if(STD_ON == Spi_InitCheck)
    if(E_OK != IsInitDone){
 #if(STD_ON == Spi_DevErrorDetect)
       Det_ReportError(
@@ -107,11 +112,26 @@ FUNC(void, SPI_CODE) module_Spi::DeInitFunction(void){
 #endif
    }
    else{
+#endif
       IsInitDone = E_NOT_OK;
+#if(STD_ON == Spi_InitCheck)
    }
+#endif
 }
 
 FUNC(void, SPI_CODE) module_Spi::MainFunction(void){
+#if(STD_ON == Spi_InitCheck)
+   if(E_OK != IsInitDone){
+#if(STD_ON == Spi_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+#endif
+#if(STD_ON == Spi_InitCheck)
+   }
+#endif
 }
 
 class class_Spi_Unused{
