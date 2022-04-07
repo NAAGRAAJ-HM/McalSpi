@@ -101,8 +101,8 @@ FUNC(void, SPI_CODE) module_Spi::InitFunction(
             lptrCfg = lptrCfgModule;
          }
          else{
-// use PBcfg_CanIf as back-up configuration
-            lptrCfg = PBcfg_CanIf;
+// use PBcfgCanIf as back-up configuration
+            lptrCfg = &PBcfgSpi;
          }
       }
       IsInitDone = E_OK;
