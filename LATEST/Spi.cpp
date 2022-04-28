@@ -7,6 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
+#include "Spi_core.hpp"
 #include "infSpi_EcuM.hpp"
 #include "infSpi_Dcm.hpp"
 #include "infSpi_SchM.hpp"
