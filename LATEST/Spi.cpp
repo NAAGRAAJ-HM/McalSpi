@@ -7,10 +7,9 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
+#include "CfgSpi.hpp"
 #include "Spi_core.hpp"
-#include "infSpi_EcuM.hpp"
-#include "infSpi_Dcm.hpp"
-#include "infSpi_SchM.hpp"
+#include "infSpi.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -44,6 +43,7 @@ class module_Spi:
       );
       FUNC(void, SPI_CODE) DeInitFunction (void);
       FUNC(void, SPI_CODE) MainFunction   (void);
+      SPI_CORE_FUNCTIONALITIES
 };
 
 extern VAR(module_Spi, SPI_VAR) Spi;
@@ -58,7 +58,6 @@ CONSTP2VAR(infSchMClient, SPI_VAR, SPI_CONST) gptrinfSchMClient_Spi = &Spi;
 /******************************************************************************/
 /* PARAMS                                                                     */
 /******************************************************************************/
-#include "CfgSpi.hpp"
 
 /******************************************************************************/
 /* OBJECTS                                                                    */
