@@ -89,7 +89,10 @@ FUNC(void, SPI_CODE) module_Spi::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, SPI_CONFIG_DATA, SPI_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == Spi_InitCheck)
-   if(E_OK != IsInitDone){
+   if(
+         E_OK
+      != IsInitDone
+   ){
 #endif
       if(NULL_PTR != lptrCfgModule){
          if(STD_HIGH){
@@ -127,7 +130,10 @@ FUNC(void, SPI_CODE) module_Spi::InitFunction(
 
 FUNC(void, SPI_CODE) module_Spi::DeInitFunction(void){
 #if(STD_ON == Spi_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == Spi_InitCheck)
       IsInitDone = E_NOT_OK;
@@ -147,7 +153,10 @@ FUNC(void, SPI_CODE) module_Spi::DeInitFunction(void){
 
 FUNC(void, SPI_CODE) module_Spi::MainFunction(void){
 #if(STD_ON == Spi_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == Spi_InitCheck)
    }
