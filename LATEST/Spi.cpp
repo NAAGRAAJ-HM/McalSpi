@@ -9,7 +9,7 @@
 #include "Module.hpp"
 #include "CfgSpi.hpp"
 #include "Spi_core.hpp"
-#include "infSpi.hpp"
+#include "infSpi_Exp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -32,6 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_Spi:
+   INTERFACES_EXPORTED_SPI
       public abstract_module
    ,  public class_Spi_Functionality
 {
