@@ -32,7 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_Spi:
-   INTERFACES_EXPORTED_SPI
+      INTERFACES_EXPORTED_SPI
       public abstract_module
    ,  public class_Spi_Functionality
 {
