@@ -10,6 +10,7 @@
 #include "CfgSpi.hpp"
 #include "Spi_core.hpp"
 #include "infSpi_Exp.hpp"
+#include "infSpi_Imp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
