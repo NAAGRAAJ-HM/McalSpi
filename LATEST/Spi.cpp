@@ -74,7 +74,7 @@ CONSTP2VAR(infSchMClient, SPI_VAR, SPI_CONST) gptrinfSchMClient_Spi = &Spi;
 VAR(module_Spi, SPI_VAR) Spi(
    {
 #if(STD_ON == _ReSIM)
-// char strModuleName[6];
+   char strModuleName[6] = "SPI";
 #else
 #endif
          SPI_AR_RELEASE_VERSION_MAJOR
