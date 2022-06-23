@@ -130,7 +130,9 @@ FUNC(void, SPI_CODE) module_Spi::InitFunction(
 #endif
 }
 
-FUNC(void, SPI_CODE) module_Spi::DeInitFunction(void){
+FUNC(void, SPI_CODE) module_Spi::DeInitFunction(
+   void
+){
 #if(STD_ON == Spi_InitCheck)
    if(
          E_OK
@@ -153,7 +155,9 @@ FUNC(void, SPI_CODE) module_Spi::DeInitFunction(void){
 #endif
 }
 
-FUNC(void, SPI_CODE) module_Spi::MainFunction(void){
+FUNC(void, SPI_CODE) module_Spi::MainFunction(
+   void
+){
 #if(STD_ON == Spi_InitCheck)
    if(
          E_OK
@@ -175,37 +179,59 @@ FUNC(void, SPI_CODE) module_Spi::MainFunction(void){
 #endif
 }
 
-FUNC(void, SPI_CODE) module_Spi::WriteIB(void){
+FUNC(void, SPI_CODE) module_Spi::WriteIB(
+   void
+){
 }
 
-FUNC(void, SPI_CODE) module_Spi::AsyncTransmit(void){
+FUNC(void, SPI_CODE) module_Spi::AsyncTransmit(
+   void
+){
 }
 
-FUNC(void, SPI_CODE) module_Spi::ReadIB(void){
+FUNC(void, SPI_CODE) module_Spi::ReadIB(
+   void
+){
 }
 
-FUNC(void, SPI_CODE) module_Spi::SetupEB(void){
+FUNC(void, SPI_CODE) module_Spi::SetupEB(
+   void
+){
 }
 
-FUNC(void, SPI_CODE) module_Spi::GetStatus(void){
+FUNC(void, SPI_CODE) module_Spi::GetStatus(
+   void
+){
 }
 
-FUNC(void, SPI_CODE) module_Spi::GetJobResult(void){
+FUNC(void, SPI_CODE) module_Spi::GetJobResult(
+   void
+){
 }
 
-FUNC(void, SPI_CODE) module_Spi::GetSequenceResult(void){
+FUNC(void, SPI_CODE) module_Spi::GetSequenceResult(
+   void
+){
 }
 
-FUNC(void, SPI_CODE) module_Spi::SyncTransmit(void){
+FUNC(void, SPI_CODE) module_Spi::SyncTransmit(
+   void
+){
 }
 
-FUNC(void, SPI_CODE) module_Spi::GetHWUnitStatus(void){
+FUNC(void, SPI_CODE) module_Spi::GetHWUnitStatus(
+   void
+){
 }
 
-FUNC(void, SPI_CODE) module_Spi::Cancel(void){
+FUNC(void, SPI_CODE) module_Spi::Cancel(
+   void
+){
 }
 
-FUNC(void, SPI_CODE) module_Spi::SetAsyncMode(void){
+FUNC(void, SPI_CODE) module_Spi::SetAsyncMode(
+   void
+){
 }
 
 /******************************************************************************/
