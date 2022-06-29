@@ -41,12 +41,8 @@ class module_Spi:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-            Std_TypeReturn          IsInitDone{E_NOT_OK};
-      const CfgModule_TypeAbstract* lptrCfg{(CfgModule_TypeAbstract*)NULL_PTR};
 
    public:
-      module_Spi(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
-      }
       FUNC(void, SPI_CODE) InitFunction(
          CONSTP2CONST(CfgModule_TypeAbstract, SPI_CONFIG_DATA, SPI_APPL_CONST) lptrCfgModule
       );
@@ -71,18 +67,7 @@ CONSTP2VAR(infSchMClient, SPI_VAR, SPI_CONST) gptrinfSchMClient_Spi = &Spi;
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_Spi, SPI_VAR) Spi(
-   {
-         SPI_AR_RELEASE_VERSION_MAJOR
-      ,  SPI_AR_RELEASE_VERSION_MINOR
-      ,  0x00
-      ,  0xFF
-      ,  0x01
-      ,  '0'
-      ,  '1'
-      ,  '0'
-   }
-);
+VAR(module_Spi, SPI_VAR) Spi;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
