@@ -82,12 +82,7 @@ FUNC(void, SPI_CODE) module_Spi::InitFunction(
    ){
 #endif
       if(NULL_PTR != lptrCfgModule){
-         if(STD_HIGH){
-            lptrCfg = lptrCfgModule;
-         }
-         else{
-            lptrCfg = &PBcfgSpi;
-         }
+         lptrCfg = lptrCfgModule;
       }
       else{
 #if(STD_ON == Spi_DevErrorDetect)
