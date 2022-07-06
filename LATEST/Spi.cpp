@@ -7,9 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
-#include "CfgSpi.hpp"
-#include "Spi_core.hpp"
-#include "infSpi_Exp.hpp"
+#include "Spi.hpp"
 #include "infSpi_Imp.hpp"
 
 /******************************************************************************/
@@ -32,26 +30,6 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
-class module_Spi:
-      INTERFACES_EXPORTED_SPI
-      public abstract_module
-   ,  public class_Spi_Functionality
-{
-   private:
-/******************************************************************************/
-/* OBJECTS                                                                    */
-/******************************************************************************/
-
-   public:
-      FUNC(void, SPI_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, SPI_CONFIG_DATA, SPI_APPL_CONST) lptrCfgModule
-      );
-      FUNC(void, SPI_CODE) DeInitFunction (void);
-      FUNC(void, SPI_CODE) MainFunction   (void);
-      SPI_CORE_FUNCTIONALITIES
-};
-
-extern VAR(module_Spi, SPI_VAR) Spi;
 
 /******************************************************************************/
 /* CONSTS                                                                     */
