@@ -8,9 +8,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "infSpi_EcuM.hpp"
-#include "infSpi_Dcm.hpp"
 #include "infSpi_Det.hpp"
-#include "infSpi_SchM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
