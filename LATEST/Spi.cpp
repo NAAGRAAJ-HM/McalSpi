@@ -48,7 +48,8 @@ VAR(module_Spi, SPI_VAR) Spi;
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
 FUNC(void, SPI_CODE) module_Spi::InitFunction(
-   CONSTP2CONST(CfgModule_TypeAbstract, SPI_CONFIG_DATA, SPI_APPL_CONST) lptrCfgModule
+      CONSTP2CONST(ConstModule_TypeAbstract, SPI_CONST,       SPI_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   SPI_CONFIG_DATA, SPI_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == Spi_InitCheck)
    if(
@@ -56,8 +57,12 @@ FUNC(void, SPI_CODE) module_Spi::InitFunction(
       != IsInitDone
    ){
 #endif
-      if(NULL_PTR != lptrCfgModule){
-         lptrCfg = lptrCfgModule;
+      if(
+            (NULL_PTR != lptrConstModule)
+         && (NULL_PTR != lptrCfgModule)
+      ){
+         lptrConst = lptrConstModule;
+         lptrCfg   = lptrCfgModule;
       }
       else{
 #if(STD_ON == Spi_DevErrorDetect)

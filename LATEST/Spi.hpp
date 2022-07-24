@@ -7,6 +7,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
+#include "ConstSpi.hpp"
 #include "CfgSpi.hpp"
 #include "Spi_core.hpp"
 #include "infSpi_Exp.hpp"
@@ -31,13 +32,15 @@ class module_Spi:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
+      const ConstSpi_Type* lptrConst = (ConstSpi_Type*)NULL_PTR;
 
    public:
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
       FUNC(void, SPI_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, SPI_CONFIG_DATA, SPI_APPL_CONST) lptrCfgModule
+            CONSTP2CONST(ConstModule_TypeAbstract, SPI_CONST,       SPI_APPL_CONST) lptrConstModule
+         ,  CONSTP2CONST(CfgModule_TypeAbstract,   SPI_CONFIG_DATA, SPI_APPL_CONST) lptrCfgModule
       );
       FUNC(void, SPI_CODE) DeInitFunction (void);
       FUNC(void, SPI_CODE) MainFunction   (void);
