@@ -61,7 +61,7 @@ FUNC(void, SPI_CODE) module_Spi::InitFunction(
             (NULL_PTR != lptrConstModule)
          && (NULL_PTR != lptrCfgModule)
       ){
-         lptrConst = lptrConstModule;
+         lptrConst = (const ConstSpi_Type*)lptrConstModule;
          lptrCfg   = lptrCfgModule;
       }
       else{
