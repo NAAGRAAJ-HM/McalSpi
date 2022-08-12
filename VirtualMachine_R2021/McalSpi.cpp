@@ -13,18 +13,18 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define MCALSPI_AR_RELEASE_VERSION_MAJOR                                           4
-#define MCALSPI_AR_RELEASE_VERSION_MINOR                                           3
+#define SPI_AR_RELEASE_VERSION_MAJOR                                           4
+#define SPI_AR_RELEASE_VERSION_MINOR                                           3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(MCALSPI_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
-   #error "Incompatible MCALSPI_AR_RELEASE_VERSION_MAJOR!"
+#if(SPI_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
+   #error "Incompatible SPI_AR_RELEASE_VERSION_MAJOR!"
 #endif
 
-#if(MCALSPI_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
-   #error "Incompatible MCALSPI_AR_RELEASE_VERSION_MINOR!"
+#if(SPI_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
+   #error "Incompatible SPI_AR_RELEASE_VERSION_MINOR!"
 #endif
 
 /******************************************************************************/
@@ -42,14 +42,14 @@
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_McalSpi, MCALSPI_VAR) McalSpi;
+VAR(module_McalSpi, SPI_VAR) McalSpi;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, MCALSPI_CODE) module_McalSpi::InitFunction(
-      CONSTP2CONST(ConstModule_TypeAbstract, MCALSPI_CONST,       MCALSPI_APPL_CONST) lptrConstModule
-   ,  CONSTP2CONST(CfgModule_TypeAbstract,   MCALSPI_CONFIG_DATA, MCALSPI_APPL_CONST) lptrCfgModule
+FUNC(void, SPI_CODE) module_McalSpi::InitFunction(
+      CONSTP2CONST(ConstModule_TypeAbstract, SPI_CONST,       SPI_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   SPI_CONFIG_DATA, SPI_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == McalSpi_InitCheck)
    if(
@@ -83,14 +83,14 @@ FUNC(void, MCALSPI_CODE) module_McalSpi::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  MCALSPI_E_UNINIT
+         ,  SPI_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, MCALSPI_CODE) module_McalSpi::DeInitFunction(
+FUNC(void, SPI_CODE) module_McalSpi::DeInitFunction(
    void
 ){
 #if(STD_ON == McalSpi_InitCheck)
@@ -108,14 +108,14 @@ FUNC(void, MCALSPI_CODE) module_McalSpi::DeInitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  MCALSPI_E_UNINIT
+         ,  SPI_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, MCALSPI_CODE) module_McalSpi::MainFunction(
+FUNC(void, SPI_CODE) module_McalSpi::MainFunction(
    void
 ){
 #if(STD_ON == McalSpi_InitCheck)
@@ -132,64 +132,64 @@ FUNC(void, MCALSPI_CODE) module_McalSpi::MainFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  MCALSPI_E_UNINIT
+         ,  SPI_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, MCALSPI_CODE) module_McalSpi::WriteIB(
+FUNC(void, SPI_CODE) module_McalSpi::WriteIB(
    void
 ){
 }
 
-FUNC(void, MCALSPI_CODE) module_McalSpi::AsyncTransmit(
+FUNC(void, SPI_CODE) module_McalSpi::AsyncTransmit(
    void
 ){
 }
 
-FUNC(void, MCALSPI_CODE) module_McalSpi::ReadIB(
+FUNC(void, SPI_CODE) module_McalSpi::ReadIB(
    void
 ){
 }
 
-FUNC(void, MCALSPI_CODE) module_McalSpi::SetupEB(
+FUNC(void, SPI_CODE) module_McalSpi::SetupEB(
    void
 ){
 }
 
-FUNC(void, MCALSPI_CODE) module_McalSpi::GetStatus(
+FUNC(void, SPI_CODE) module_McalSpi::GetStatus(
    void
 ){
 }
 
-FUNC(void, MCALSPI_CODE) module_McalSpi::GetJobResult(
+FUNC(void, SPI_CODE) module_McalSpi::GetJobResult(
    void
 ){
 }
 
-FUNC(void, MCALSPI_CODE) module_McalSpi::GetSequenceResult(
+FUNC(void, SPI_CODE) module_McalSpi::GetSequenceResult(
    void
 ){
 }
 
-FUNC(void, MCALSPI_CODE) module_McalSpi::SyncTransmit(
+FUNC(void, SPI_CODE) module_McalSpi::SyncTransmit(
    void
 ){
 }
 
-FUNC(void, MCALSPI_CODE) module_McalSpi::GetHWUnitStatus(
+FUNC(void, SPI_CODE) module_McalSpi::GetHWUnitStatus(
    void
 ){
 }
 
-FUNC(void, MCALSPI_CODE) module_McalSpi::McalCancel(
+FUNC(void, SPI_CODE) module_McalSpi::McalCancel(
    void
 ){
 }
 
-FUNC(void, MCALSPI_CODE) module_McalSpi::SetAsyncMode(
+FUNC(void, SPI_CODE) module_McalSpi::SetAsyncMode(
    void
 ){
 }
