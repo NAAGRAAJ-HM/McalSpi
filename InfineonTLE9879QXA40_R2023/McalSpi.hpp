@@ -1,13 +1,13 @@
 #pragma once
 /******************************************************************************/
-/* File   : McalSpi.hpp                                                           */
+/* File   : McalSpi.hpp                                                       */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "ConstMcalSpi.hpp"
+#include "infMcalSpi_ServiceNvM_Types.hpp"
 #include "CfgMcalSpi.hpp"
 #include "McalSpi_core.hpp"
 #include "infMcalSpi_Exp.hpp"
