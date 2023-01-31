@@ -13,19 +13,10 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define MCALSPI_AR_RELEASE_VERSION_MAJOR                                       4
-#define MCALSPI_AR_RELEASE_VERSION_MINOR                                       3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(MCALSPI_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
-   #error "Incompatible MCALSPI_AR_RELEASE_VERSION_MAJOR!"
-#endif
-
-#if(MCALSPI_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
-   #error "Incompatible MCALSPI_AR_RELEASE_VERSION_MINOR!"
-#endif
 
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
@@ -48,7 +39,7 @@ VAR(module_McalSpi, MCALSPI_VAR) McalSpi;
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
 FUNC(void, MCALSPI_CODE) module_McalSpi::InitFunction(
-      CONSTP2CONST(ConstModule_TypeAbstract, MCALSPI_CONST,       MCALSPI_APPL_CONST) lptrConstModule
+      CONSTP2CONST(ConstModule_TypeAbstract, MCALSPI_CONST,       MCALSPI_APPL_CONST) lptrNvMBlocksRomModule
    ,  CONSTP2CONST(CfgModule_TypeAbstract,   MCALSPI_CONFIG_DATA, MCALSPI_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == McalSpi_InitCheck)
@@ -58,10 +49,10 @@ FUNC(void, MCALSPI_CODE) module_McalSpi::InitFunction(
    ){
 #endif
       if(
-            (NULL_PTR != lptrConstModule)
+            (NULL_PTR != lptrNvMBlocksRomModule)
          && (NULL_PTR != lptrCfgModule)
       ){
-         lptrConst = (const ConstMcalSpi_Type*)lptrConstModule;
+         lptrNvMBlocksRom = lptrNvMBlocksRomModule;
          lptrCfg   = lptrCfgModule;
       }
       else{

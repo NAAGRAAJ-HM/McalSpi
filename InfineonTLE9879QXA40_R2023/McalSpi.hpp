@@ -32,14 +32,14 @@ class module_McalSpi:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-      const ConstMcalSpi_Type* lptrConst = (ConstMcalSpi_Type*)NULL_PTR;
+      const ConstModule_TypeAbstract* lptrNvMBlocksRom = (ConstModule_TypeAbstract*)NULL_PTR;
 
    public:
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
       FUNC(void, MCALSPI_CODE) InitFunction(
-            CONSTP2CONST(ConstModule_TypeAbstract, MCALSPI_CONST,       MCALSPI_APPL_CONST) lptrConstModule
+            CONSTP2CONST(ConstModule_TypeAbstract, MCALSPI_CONST,       MCALSPI_APPL_CONST) lptrNvMBlocksRomModule
          ,  CONSTP2CONST(CfgModule_TypeAbstract,   MCALSPI_CONFIG_DATA, MCALSPI_APPL_CONST) lptrCfgModule
       );
       FUNC(void, MCALSPI_CODE) DeInitFunction (void);
